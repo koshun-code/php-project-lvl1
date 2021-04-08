@@ -1,3 +1,7 @@
 #!/usr/bin/env php
+
+
 <?php
-echo 'Welcome to the Brain Games!';
+use Brain\Games\Cli;
+
+hello();
