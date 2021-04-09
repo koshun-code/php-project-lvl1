@@ -6,6 +6,6 @@
     },
     "bin": ["bin/brain-games"],
      "autoload": {
-        "files": ["src/Cli.php"],
+        "files": ["src/Cli.php"]
     }
 }
