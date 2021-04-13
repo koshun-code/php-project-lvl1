@@ -1,6 +1,6 @@
 <?php
 
-$n = 3;
+$n = 1;
 while ($n <= 3) {
 	$number = rand(1, 50);
 	$correctAnswer = isEven($number) ? 'yes' : 'no';
