@@ -1,7 +1,6 @@
 <?php
 
 $n = 3;
-$correct = ['yes', 'no'];
 while ($n <= 3) {
 	$number = rand(1, 50);
 	$correctAnswer = inEven($number) ? 'yes' : 'no';
@@ -9,9 +8,6 @@ while ($n <= 3) {
 	sprintf("Question: %d", $number);
 	sprintf("Your answer: %s", $userAnswer);
 
-    if (!in_array($userAnswer, $correct)) {
-    	return wrongAnswer($name, $userAnswer, $correctAnswer);
-    }
     if (($correctAnswer === 'yes' && $userAnswer === 'yes') || ($correctAnswer === 'no' && $userAnswer === 'no')) {
     	print_r('Corret!');
     } else {
