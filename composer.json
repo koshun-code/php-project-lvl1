@@ -7,7 +7,10 @@
     "require-dev": {
         "squizlabs/php_codesniffer": "*"
     },
-    "bin": ["bin/brain-games"],
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even"
+    ],
      "autoload": {
         "files": ["src/Cli.php"]
     },
