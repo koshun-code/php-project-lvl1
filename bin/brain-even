@@ -3,7 +3,7 @@
 $n = 3;
 while ($n <= 3) {
 	$number = rand(1, 50);
-	$correctAnswer = inEven($number) ? 'yes' : 'no';
+	$correctAnswer = isEven($number) ? 'yes' : 'no';
 	$userAnswer = prompt('Answer "yes" if the number is even, otherwise answer "no".');
 	sprintf("Question: %d", $number);
 	sprintf("Your answer: %s", $userAnswer);
