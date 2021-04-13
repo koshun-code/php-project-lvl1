@@ -1,0 +1,15 @@
+<?php
+
+function evenNumbers()
+{
+	$rand = randomNumber();
+	line('Answer "yes" if the number is even, otherwise answer "no".');
+	$answer = prompt('Question: '. $rand);
+	sprintf('Your answer: yes %s', $answer);
+
+	$correctAnswer = isEven($rand) ? 'yes' : 'no';
+
+	if ($answer !== 'yes' || $answer !== 'no') {
+		return wrongAnswer($name, $answer, $correctAnswer);
+	}
+}
