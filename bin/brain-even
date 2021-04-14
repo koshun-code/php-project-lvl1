@@ -1,20 +1,34 @@
+#!/usr/bin/env php
 <?php
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
 
-$n = 1;
-while ($n <= 3) {
+use function BrainGames\src\hello;
+use function BrainGames\src\isEven;
+use function BrainGames\src\wrongAnswer;
+use function cli\prompt;
+use function cli\line;
+
+$name = hello();
+$n = 0;
+line('Answer "yes" if the number is even, otherwise answer "no".');
+while ($n < 3) {
 	$number = rand(1, 50);
 	$correctAnswer = isEven($number) ? 'yes' : 'no';
-	$userAnswer = prompt('Answer "yes" if the number is even, otherwise answer "no".');
-	sprintf("Question: %d", $number);
-	sprintf("Your answer: %s", $userAnswer);
+	$userAnswer = prompt("\n Question: {$number}");
 
     if (($correctAnswer === 'yes' && $userAnswer === 'yes') || ($correctAnswer === 'no' && $userAnswer === 'no')) {
-    	print_r('Corret!');
+    	print_r("Your answer: {$userAnswer} \n Corret!");
     } else {
     	return wrongAnswer($name, $userAnswer, $correctAnswer);
     }
     $n += 1;
     if ($n === 3) {
-    	sprintf('Congratulations, %s!', $name);
+    	print_r("\n Congratulations, {$name} \n");
     }
 }
