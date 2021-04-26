@@ -42,3 +42,15 @@ function wrongAnswer($name, $userAnswer, $correctAnswer)
 {
     print_r("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.Let's try again, {$name}! \n");
 }
+/**
+ * 
+ * @param [number] $num1
+ * 
+ * @param [number] $num2
+ * 
+ * @return [number]
+ */
+function gcd($num1, $num2)
+{
+    return ($num1 % $num2) ? gcd($num2, $num1 % $num2) : $num2;
+}
