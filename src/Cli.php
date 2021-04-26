@@ -54,3 +54,45 @@ function gcd($num1, $num2)
 {
     return ($num1 % $num2) ? gcd($num2, $num1 % $num2) : $num2;
 }
+
+/**
+ * 
+ * @param $inNum [string] [progression of numbers]
+ * 
+ * @return [string] [return string with closed one number]
+ */
+function getRandNum($inNum)
+{ 
+    $arrNums = explode(' ', trim($inNum));
+    $count = sizeof($arrNums);
+    $rand = rand(0, $count - 1);
+    $res = '';
+
+    for ($i = 0; $i < $count; $i += 1) {
+        if ($i === $rand) {
+            $res .= ' ... ';
+        } else {
+            $res .= " {$arrNums[$i]} ";
+        }
+    }
+    return $res;
+}
+/**
+ * 
+ * @param $number [int] [start progression]
+ * 
+ * @param $count [int] [finish progression]
+ * 
+ * @param $step [int] [step use in progression]
+ * 
+ * @return [string] [ retrun string progression]
+ */
+function setProgression($number, $count, $step)
+{
+    $result = '';
+    $rand = rand($number, $count);
+    for ($i = $number; $i <= $count; $i += $step) {
+        $result .=  (string)$i . ' ';
+    }
+    return $result;
+}
