@@ -29,6 +29,6 @@ while ($n < 3) {
     }
     $n += 1;
     if ($n === 3) {
-    	print_r("\n Congratulations, {$name} \n");
+    	print_r("\n Congratulations, {$name}");
     }
 }
