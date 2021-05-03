@@ -18,9 +18,9 @@ function hello()
 }
 /**
  * Is Even or not
- * 
+ *
  * @param [integer] $number [number]
- * 
+ *
  * @return [bool]         [true or false]
  */
 function isEven($number)
@@ -29,13 +29,13 @@ function isEven($number)
 }
 /**
  * [wrongAnswer description]
- * 
+ *
  * @param [string] $name          [description]
- * 
+ *
  * @param [string] $userAnswer    [description]
- * 
+ *
  * @param [string] $correctAnswer [description]
- * 
+ *
  * @return [string]                [description]
  */
 function wrongAnswer($name, $userAnswer, $correctAnswer)
@@ -43,11 +43,11 @@ function wrongAnswer($name, $userAnswer, $correctAnswer)
     print_r("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.Let's try again, {$name}! \n");
 }
 /**
- * 
+ *
  * @param [number] $num1
- * 
+ *
  * @param [number] $num2
- * 
+ *
  * @return [number]
  */
 function gcd($num1, $num2)
@@ -56,18 +56,18 @@ function gcd($num1, $num2)
 }
 
 /**
- * 
+ *
  * @param $inNum [string] [progression of numbers]
- * 
+ *
  * @return [string] [return string with closed one number]
  */
 function getRandNum($inNum)
-{ 
+{
     $arrNums = explode(' ', trim($inNum));
     $count = sizeof($arrNums);
     $rand = rand(0, $count - 1);
     $res = '';
-
+    $output = [];
     for ($i = 0; $i < $count; $i += 1) {
         if ($i === $rand) {
             $res .= ' ... ';
@@ -75,16 +75,18 @@ function getRandNum($inNum)
             $res .= " {$arrNums[$i]} ";
         }
     }
-    return $res;
+    $output[0] = $res;
+    $output[1] = $arrNums[$rand];
+    return $output;
 }
 /**
- * 
+ *
  * @param $number [int] [start progression]
- * 
+ *
  * @param $count [int] [finish progression]
- * 
+ *
  * @param $step [int] [step use in progression]
- * 
+ *
  * @return [string] [ retrun string progression]
  */
 function setProgression($number, $count, $step)
@@ -95,4 +97,22 @@ function setProgression($number, $count, $step)
         $result .=  (string)$i . ' ';
     }
     return $result;
+}
+/**
+ *
+ *
+ */
+function primeCheck($number)
+{
+    $res = '';
+    if ($number === 1) {
+        $res = 'no';
+    }
+    for ($i = 2; $i <= sqrt($number); $i += 1) {
+        if ($number % $i === 0) {
+            $res = 'no';
+        }
+    }
+    $res = 'yes';
+    return $res;
 }
