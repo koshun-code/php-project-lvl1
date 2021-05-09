@@ -1,10 +1,13 @@
-name: BRAIN GAMES
+name: On workflows
 on: 
-  - push
-  - pull_request
+ push:
+  branches: main
+  
 jobs:
-  Explore-GitHub-Actions:
+  lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Install
+        run: make install
       - name: Lint
       - run: make lint
