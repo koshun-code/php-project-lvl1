@@ -1,5 +1,7 @@
 #!/usr/bin/env php
 <?php
+use function BrainGames\Games\Gcd\brainGCD;
+
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
 if (file_exists($autoloadPath1)) {
@@ -8,28 +10,4 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function BrainGames\src\hello;
-use function BrainGames\src\wrongAnswer;
-use function BrainGames\src\gcd;
-use function cli\prompt;
-use function cli\line;
-
-$name = hello();
-$n = 0;
-line('Find the greatest common divisor of given numbers.');
-while ($n < 3) {
-    $numberOne = rand(1, 100);
-    $numberTwo = rand(1, 100);
-    $userAnswer = prompt("\n Question: {$numberOne} {$numberTwo}");
-    $correctAnswer = gcd($numberOne, $numberTwo);
-
-    if ((int)$userAnswer === $correctAnswer) {
-        print_r("Your answer: {$userAnswer} \n Corret!");
-    } else {
-        return wrongAnswer($name, $userAnswer, $correctAnswer);
-    }
-    $n += 1;
-    if ($n === 3) {
-    	print_r("\n Congratulations, {$name} \n");
-    }
-}
+brainGCD();

@@ -12,9 +12,9 @@ function getData()
 {
     $result = [];
     for ($i = 0; $i < 4; $i += 1) {
-        $start = rand(10, 100);
+        $start = rand(1, 100);
         $finish = rand(10, 100);
-        $step = rand(2, 10);
+        $step = rand(2, 5);
         $progression = setProgression($start, $finish, $step);
         $result[] = getRandNum($progression);
     }

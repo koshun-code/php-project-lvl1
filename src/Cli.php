@@ -46,11 +46,13 @@ function getRandNum($inNum)
     return [$res, $arrNums[$rand]];
 }
 
-function setProgression($number, $count, $step)
+function setProgression($start, $finish, $step)
 {
     $result = '';
-    $rand = rand($number, $count);
-    for ($i = $number; $i <= $count; $i += $step) {
+    if ($start > $finish) {
+        $start ^= $finish ^= $start ^= $finish;
+    }
+    for ($i = $start; $i <= $finish; $i += $step) {
         $result .=  (string)$i . ' ';
     }
     return $result;
