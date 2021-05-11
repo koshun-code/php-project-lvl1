@@ -1,14 +1,10 @@
 <?php
 
-namespace BrainGames\src;
+namespace BrainGames\Cli;
 
-  use function cli\line;
-  use function cli\prompt;
-/**
- * Make a greating
- *
- * @return greeentin
- */
+use function cli\line;
+use function cli\prompt;
+
 function hello()
 {
     line('Welcome to the Brain Game!');
@@ -16,51 +12,22 @@ function hello()
     line("Hello, %s!", $name);
     return $name;
 }
-/**
- * Is Even or not
- *
- * @param [integer] $number [number]
- *
- * @return [bool]         [true or false]
- */
+
 function isEven($number)
 {
     return 0 === $number % 2;
 }
-/**
- * [wrongAnswer description]
- *
- * @param [string] $name          [description]
- *
- * @param [string] $userAnswer    [description]
- *
- * @param [string] $correctAnswer [description]
- *
- * @return [string]                [description]
- */
+
 function wrongAnswer($name, $userAnswer, $correctAnswer)
 {
-    print_r("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.Let's try again, {$name}! \n");
+    print_r("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'. \n Let's try again, {$name}! \n");
 }
-/**
- *
- * @param [number] $num1
- *
- * @param [number] $num2
- *
- * @return [number]
- */
+
 function gcd($num1, $num2)
 {
     return ($num1 % $num2) ? gcd($num2, $num1 % $num2) : $num2;
 }
 
-/**
- *
- * @param $inNum [string] [progression of numbers]
- *
- * @return [string] [return string with closed one number]
- */
 function getRandNum($inNum)
 {
     $arrNums = explode(' ', trim($inNum));
@@ -79,16 +46,7 @@ function getRandNum($inNum)
     $output[1] = $arrNums[$rand];
     return $output;
 }
-/**
- *
- * @param $number [int] [start progression]
- *
- * @param $count [int] [finish progression]
- *
- * @param $step [int] [step use in progression]
- *
- * @return [string] [ retrun string progression]
- */
+
 function setProgression($number, $count, $step)
 {
     $result = '';
@@ -98,10 +56,7 @@ function setProgression($number, $count, $step)
     }
     return $result;
 }
-/**
- *
- *
- */
+
 function primeCheck($number)
 {
     $res = '';
@@ -115,4 +70,20 @@ function primeCheck($number)
     }
     $res = 'yes';
     return $res;
+}
+
+function choseOperation($numberOne, $numberTwo, $operand)
+{
+    switch ($operand) {
+        case '-':
+            $correctAnswer = $numberOne - $numberTwo;
+            break;
+        case '+':
+            $correctAnswer = $numberOne + $numberTwo;
+            break;
+        case '*':
+            $correctAnswer = $numberOne * $numberTwo;
+            break;
+    }
+    return $correctAnswer;
 }
