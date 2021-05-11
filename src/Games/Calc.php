@@ -6,7 +6,7 @@ use function BrainGames\Cli\choseOperation;
 use function BrainGames\Engine\engine;
 
 const OPERANDS = ['+', '-', '*'];
-const DESCRIPTION = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+const DESCRIPTION = "What is the result of the expression?";
 
 function getData()
 {
