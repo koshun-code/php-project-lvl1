@@ -20,7 +20,8 @@ function isEven($number)
 
 function wrongAnswer($name, $userAnswer, $correctAnswer)
 {
-    print_r("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'. \n Let's try again, {$name}! \n");
+    print_r("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
+        \n Let's try again, {$name}! \n");
 }
 
 function gcd($num1, $num2)
