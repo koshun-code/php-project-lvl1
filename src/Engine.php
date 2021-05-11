@@ -17,7 +17,7 @@ function engine(string $description, array $data)
         if ($userAnswer === $answer) {
             line("Correct!");
         } else {
-            wrongAnswer($name, $userAnswer, $correctAnswer);
+            wrongAnswer($name, $userAnswer, $answer);
             return false;
         }
     }
