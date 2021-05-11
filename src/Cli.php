@@ -43,9 +43,7 @@ function getRandNum($inNum)
             $res .= " {$arrNums[$i]} ";
         }
     }
-    $output[0] = $res;
-    $output[1] = $arrNums[$rand];
-    return $output;
+    return [$res, $arrNums[$rand]];
 }
 
 function setProgression($number, $count, $step)
