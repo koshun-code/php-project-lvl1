@@ -1,4 +1,4 @@
-name: On workflows
+name: BG
 on:
   - push
   - pull_request
