@@ -26,6 +26,7 @@ while ($n < 3) {
     $answer = getRandNum($progression)
     $userAnswer = prompt("\n Question: {$answer[0]}");
     $correctAnswer = $answer[1];
+
     if ((int)$userAnswer === $correctAnswer) {
         print_r("Your answer: {$userAnswer} \n Corret!");
     } else {

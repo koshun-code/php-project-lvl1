@@ -2,6 +2,7 @@
     "name": "hexlet/code",
     "description": "my first project with php",
     "require": {
+        "php": ">= 7.4.3",
         "wp-cli/php-cli-tools": "^0.11.12"
     },
     "require-dev": {
@@ -16,7 +17,11 @@
         "bin/brain-prime"
     ],
      "autoload": {
-        "files": ["src/Cli.php"]
+        "files": [
+            "src/Cli.php",
+            "src/Engine.php",
+            "src/Games/brain-calc.php"
+        ]
     },
     "scripts": {
         "phpcs": "./vendor/bin/phpcs -h"

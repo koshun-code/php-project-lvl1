@@ -25,7 +25,7 @@ function hello()
  */
 function isEven($number)
 {
-    return $number % 2 === 0 ? true : false;
+    return 0 === $number % 2;
 }
 /**
  * [wrongAnswer description]
