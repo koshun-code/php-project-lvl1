@@ -38,7 +38,7 @@ function getRandNum($inNum)
     $output = [];
     for ($i = 0; $i < $count; $i += 1) {
         if ($i === $rand) {
-            $res .= ' ... ';
+            $res .= ' .. ';
         } else {
             $res .= " {$arrNums[$i]} ";
         }
