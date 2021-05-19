@@ -18,12 +18,6 @@ function isEven(int $number): bool
     return 0 === $number % 2;
 }
 
-function wrongAnswer(string $name, string $userAnswer, string $correctAnswer): string
-{
-    print_r("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
-        \n Let's try again, {$name}! \n");
-}
-
 function gcd(int $num1, int $num2): int
 {
     return ($num1 % $num2) ? gcd($num2, $num1 % $num2) : $num2;

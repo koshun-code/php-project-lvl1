@@ -7,7 +7,7 @@ use function BrainGames\Engine\engine;
 
 const DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
-function getData()
+function getData(): array
 {
     $result = [];
     for ($i = 0; $i < 3; $i += 1) {
@@ -19,8 +19,8 @@ function getData()
     }
     return $result;
 }
-function brainGCD()
+function brainGCD(): bool
 {
     $data = getData();
-    engine(DESCRIPTION, $data);
+    return engine(DESCRIPTION, $data);
 }

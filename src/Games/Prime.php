@@ -7,7 +7,7 @@ use function BrainGames\Engine\engine;
 
 const DESCRIPTION = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
 
-function getData()
+function getData(): array
 {
     $result = [];
     for ($i = 0; $i < 3; $i += 1) {
@@ -17,8 +17,8 @@ function getData()
     }
     return $result;
 }
-function brainPrime()
+function brainPrime(): bool
 {
     $data = getData();
-    engine(DESCRIPTION, $data);
+    return engine(DESCRIPTION, $data);
 }

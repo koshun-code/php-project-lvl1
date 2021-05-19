@@ -8,7 +8,7 @@ use function BrainGames\Engine\engine;
 const OPERANDS = ['+', '-', '*'];
 const DESCRIPTION = "What is the result of the expression?";
 
-function getData()
+function getData(): array
 {
     $result = [];
     for ($i = 0; $i < 3; $i += 1) {
@@ -22,8 +22,8 @@ function getData()
     return $result;
 }
 
-function brainCalc()
+function brainCalc(): bool
 {
     $data = getData();
-    engine(DESCRIPTION, $data);
+    return engine(DESCRIPTION, $data);
 }
