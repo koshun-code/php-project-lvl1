@@ -33,7 +33,7 @@ function getRandNum($inNum)
 {
     $arrNums = explode(' ', trim($inNum));
     $count = sizeof($arrNums);
-    $rand = rand(0, $count - 1);
+    $rand = rand(1, $count - 2);
     $res = '';
     $output = [];
     for ($i = 0; $i < $count; $i += 1) {
