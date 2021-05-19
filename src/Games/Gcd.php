@@ -10,7 +10,7 @@ const DESCRIPTION = "Find the greatest common divisor of given numbers.";
 function getData()
 {
     $result = [];
-    for ($i = 0; $i <= 3; $i += 1) {
+    for ($i = 0; $i < 3; $i += 1) {
         $num1 = rand(0, 100);
         $num2 = rand(0, 100);
         $question = "{$num1} {$num2}";

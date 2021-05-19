@@ -11,7 +11,7 @@ const DESCRIPTION = "What is the result of the expression?";
 function getData()
 {
     $result = [];
-    for ($i = 0; $i < 4; $i += 1) {
+    for ($i = 0; $i < 3; $i += 1) {
         $numberOne = rand(1, 50);
         $numberTwo = rand(1, 50);
         $operand = OPERANDS[rand(0, 2)];

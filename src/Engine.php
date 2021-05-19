@@ -14,7 +14,7 @@ function engine(string $description, array $data)
     foreach ($data as [$question, $answer]) {
         line("Question: {$question}");
         $userAnswer = prompt("Your answer: ");
-        if ($userAnswer === $answer) {
+        if ($userAnswer == $answer) {
             line("Correct!");
         } else {
             wrongAnswer($name, $userAnswer, $answer);

@@ -11,8 +11,8 @@ const DESCRIPTION = "What number is missing in the progression?";
 function getData()
 {
     $result = [];
-    for ($i = 0; $i < 4; $i += 1) {
-        $start = rand(1, 100);
+    for ($i = 0; $i < 3; $i += 1) {
+        $start = rand(1, 10);
         $finish = rand(10, 100);
         $step = rand(2, 5);
         $progression = setProgression($start, $finish, $step);

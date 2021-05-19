@@ -22,9 +22,9 @@
             "src/Engine.php",
             "src/Games/Calc.php",
             "src/Games/Even.php",
-            "src/Games/Gcd",
-            "src/Games/Prime",
-            "src/Games/Progression"
+            "src/Games/Gcd.php",
+            "src/Games/Prime.php",
+            "src/Games/Progression.php"
         ]
     },
     "scripts": {

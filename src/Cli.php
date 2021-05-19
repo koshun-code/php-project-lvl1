@@ -60,17 +60,15 @@ function setProgression($start, $finish, $step)
 
 function primeCheck($number)
 {
-    $res = '';
     if ($number === 1) {
-        $res = 'no';
+        return false;
     }
     for ($i = 2; $i <= sqrt($number); $i += 1) {
         if ($number % $i === 0) {
-            $res = 'no';
+            return false;
         }
     }
-    $res = 'yes';
-    return $res;
+    return true;
 }
 
 function choseOperation($numberOne, $numberTwo, $operand)

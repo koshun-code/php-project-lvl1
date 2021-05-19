@@ -10,9 +10,9 @@ const DESCRIPTION = "Answer \"yes\" if given number is prime. Otherwise answer \
 function getData()
 {
     $result = [];
-    for ($i = 0; $i <= 3; $i += 1) {
+    for ($i = 0; $i < 3; $i += 1) {
         $question = rand(0, 100);
-        $answer = primeCheck($question);
+        $answer = (primeCheck($question)) ? 'yes' : 'no';
         $result[] = [$question, $answer];
     }
     return $result;
