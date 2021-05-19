@@ -20,12 +20,19 @@ function isEven(int $number): bool
 
 function gcd(int $num1, int $num2): int
 {
-    return ($num1 % $num2) ? gcd($num2, $num1 % $num2) : $num2;
+    while ($num1 != $num2) {
+        if ($num1 > $num2) {
+            $num1 -= $num2;
+        } else {
+            $num2 -= $num1;
+        }
+    }
+    return $num1;
 }
 
-function getRandNum(int $inNum): array
+function getRandNum(string $inNum): array
 {
-    $arrNums = explode(' ', $inNum);
+    $arrNums = explode(' ', trim($inNum));
     $count = sizeof($arrNums);
     $rand = rand(1, $count - 2);
     $res = '';
