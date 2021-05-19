@@ -34,7 +34,7 @@ function getData()
 function getData()
 {
     $questionsAnsewrs = [];
-    for ($i = 1; $i < 3; $i++) {
+    for ($i = 1; $i <= 3; $i++) {
         $startProgression = mt_rand(1, 20);
         $diffProgression = mt_rand(1, 10);
         $progression = generateProgression($startProgression, $diffProgression, LENGTH);
