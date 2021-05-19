@@ -13,7 +13,7 @@ function engine(string $description, array $data)
     line($description);
     foreach ($data as [$question, $answer]) {
         line("Question: {$question}");
-        $userAnswer = prompt("Your answer: ");
+        $userAnswer = prompt("Your answer ");
         if ($userAnswer == $answer) {
             line("Correct!");
         } else {
