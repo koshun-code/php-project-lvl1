@@ -46,16 +46,13 @@ function getRandNum($inNum)
     return [$res, $arrNums[$rand]];
 }
 
-function setProgression($start, $finish, $step)
+function setProgression($start, $len, $step)
 {
-    $result = '';
-    if ($start > $finish) {
-        $start ^= $finish ^= $start ^= $finish;
+    $result = [];
+    for ($i = 0; $i < $len; $i += 1) {
+        $result[] =  $start + $step * $i;
     }
-    for ($i = $start; $i <= $finish; $i += $step) {
-        $result .=  (string)$i . ' ';
-    }
-    return $result;
+    return implode(' ', $result);
 }
 
 function primeCheck($number)

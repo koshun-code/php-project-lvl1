@@ -13,9 +13,9 @@ function getData()
     $result = [];
     for ($i = 0; $i < 3; $i += 1) {
         $start = rand(1, 10);
-        $finish = rand(10, 100);
-        $step = rand(2, 5);
-        $progression = setProgression($start, $finish, $step);
+        $len = 10;
+        $step = rand(1, 10);
+        $progression = setProgression($start, $len, $step);
         $result[] = getRandNum($progression);
     }
     return $result;
