@@ -5,7 +5,7 @@ namespace BrainGames\Cli;
 use function cli\line;
 use function cli\prompt;
 
-function hello()
+function hello(): string
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
@@ -13,23 +13,23 @@ function hello()
     return $name;
 }
 
-function isEven($number)
+function isEven(int $number): bool
 {
     return 0 === $number % 2;
 }
 
-function wrongAnswer($name, $userAnswer, $correctAnswer)
+function wrongAnswer(string $name, string $userAnswer, string $correctAnswer): string
 {
     print_r("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
         \n Let's try again, {$name}! \n");
 }
 
-function gcd($num1, $num2)
+function gcd(int $num1, int $num2): int
 {
     return ($num1 % $num2) ? gcd($num2, $num1 % $num2) : $num2;
 }
 
-function getRandNum($inNum)
+function getRandNum(int $inNum): array
 {
     $arrNums = explode(' ', trim($inNum));
     $count = sizeof($arrNums);
@@ -46,7 +46,7 @@ function getRandNum($inNum)
     return [$res, $arrNums[$rand]];
 }
 
-function setProgression($start, $len, $step)
+function setProgression(int $start, int $len, int $step): string
 {
     $result = [];
     for ($i = 0; $i < $len; $i += 1) {
@@ -55,7 +55,7 @@ function setProgression($start, $len, $step)
     return implode(' ', $result);
 }
 
-function primeCheck($number)
+function primeCheck(int $number): bool
 {
     if ($number === 1) {
         return false;
@@ -68,7 +68,7 @@ function primeCheck($number)
     return true;
 }
 
-function choseOperation($numberOne, $numberTwo, $operand)
+function choseOperation(int $numberOne, int $numberTwo, string $operand): int
 {
     switch ($operand) {
         case '-':

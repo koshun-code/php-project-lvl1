@@ -31,7 +31,7 @@ function getData()
     return $result;
 }
 */
-function getData()
+function getData(): array
 {
     $questionsAnsewrs = [];
     for ($i = 1; $i <= 3; $i++) {

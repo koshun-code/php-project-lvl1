@@ -3,7 +3,6 @@
 namespace BrainGames\Engine;
 
 use function BrainGames\Cli\hello;
-use function BrainGames\Cli\wrongAnswer;
 use function cli\line;
 use function cli\prompt;
 
@@ -17,7 +16,8 @@ function engine(string $description, array $data)
         if ($userAnswer == $answer) {
             line("Correct!");
         } else {
-            wrongAnswer($name, $userAnswer, $answer);
+            print_r("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$answer}'.
+            \n Let's try again, {$name}! \n");
             return false;
         }
     }
