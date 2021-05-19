@@ -25,7 +25,7 @@ function gcd(int $num1, int $num2): int
 
 function getRandNum(int $inNum): array
 {
-    $arrNums = explode(' ', trim($inNum));
+    $arrNums = explode(' ', $inNum);
     $count = sizeof($arrNums);
     $rand = rand(1, $count - 2);
     $res = '';
@@ -64,6 +64,7 @@ function primeCheck(int $number): bool
 
 function choseOperation(int $numberOne, int $numberTwo, string $operand): int
 {
+    $correctAnswer = 0;
     switch ($operand) {
         case '-':
             $correctAnswer = $numberOne - $numberTwo;

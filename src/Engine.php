@@ -6,7 +6,7 @@ use function BrainGames\Cli\hello;
 use function cli\line;
 use function cli\prompt;
 
-function engine(string $description, array $data)
+function engine(string $description, array $data): bool
 {
     $name = hello();
     line($description);
